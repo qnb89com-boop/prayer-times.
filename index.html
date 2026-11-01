@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>أوقات الصلاة - الزاب الأسفل</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#fbf8ea;overflow:hidden}
+body{font-family:'Tajawal',system-ui,'Segoe UI',Tahoma,sans-serif;color:#0b3d2a;position:fixed;inset:0;width:100%}
+#app{position:absolute;left:0;top:0;width:941px;height:1672px;transform-origin:0 0;background:#fbf8ea;overflow:hidden}
+#app,#app *{white-space:nowrap}
+#app>*{position:absolute}
+.arch{left:0;top:0;width:941px;height:190px}
+.arch,.g1,.g2,.ln{pointer-events:none}
+.gear{z-index:5;left:38px;top:45px;width:94px;height:94px;border-radius:50%;background:#cfeebb;border:0;display:grid;place-items:center;padding:0}
+.gear svg{width:62px;height:62px}
+.g1{left:0;top:40px;width:941px;height:72px;line-height:72px;text-align:center;font-size:44px;font-weight:800}
+.g2{left:0;top:108px;width:941px;height:72px;line-height:72px;text-align:center;font-size:38px;font-weight:700}
+.ln{height:2px;background:#cdbd95;top:144px}
+.hero{left:31px;top:196px;width:881px;height:410px;border-radius:48px;background:#0b5d40;overflow:hidden;box-shadow:0 14px 28px rgba(11,93,64,.3)}
+.hero>*{position:absolute}
+.hero svg.il{left:0;top:0;width:409px;height:410px}
+.vd{left:409px;top:74px;width:2px;height:287px;background:rgba(255,255,255,.65)}
+.pill{left:472px;top:42px;width:359px;height:71px;border-radius:36px;background:#fdd835;color:#0b3d2a;font-size:36px;font-weight:700;line-height:71px;text-align:center}
+.hn{left:422px;top:130px;width:459px;height:84px;line-height:84px;text-align:center;color:#fff;font-size:68px;font-weight:800}
+.dg,.cl{top:235px;height:92px;line-height:92px;text-align:center;color:#fff;font-size:78px;font-weight:700;direction:ltr;font-variant-numeric:tabular-nums}
+.dg{width:130px}.cl{width:30px}
+.lb{top:336px;width:100px;height:36px;line-height:36px;text-align:center;color:#fff;font-size:28px;font-weight:500}
+.list{left:33px;top:637px;width:878px;height:805px;border-radius:42px;background:#fffefb;border:2px solid #ece2d0}
+.list>*{position:absolute}
+.dv{left:45px;width:819px;height:2px;background:#f1e7d6}
+.r{left:22px;width:833px;height:120px;border-radius:38px}
+.r.on{background:#cdeebb}
+.r>*{position:absolute}
+.ic{left:718px;top:6px;width:108px;height:108px;border-radius:50%;background:#d3efc2;display:grid;place-items:center}
+.r.on .ic{background:#c4e6b0}
+.ic svg{width:72px;height:72px}
+.nm{right:158px;top:0;line-height:120px;font-size:50px;font-weight:700}
+.tm{left:33px;top:0;line-height:120px;font-size:68px;font-weight:800;direction:ltr;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tm small{font-size:38px;font-weight:700;margin-left:14px}
+.foot{left:31px;top:1486px;width:881px;height:124px;border-radius:62px;background:#bfe8ae}
+.foot>*{position:absolute}
+.ft{left:200px;top:0;width:430px;line-height:124px;text-align:center;font-size:46px;font-weight:700}
+.fd{left:641px;top:29px;width:2px;height:70px;background:#7fa56f}
+.foot svg{left:691px;top:24px;width:80px;height:80px}
+#ban{display:none;position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:12px;right:12px;max-width:456px;margin:auto;background:#0b5d40;color:#fff;border-radius:18px;padding:14px;z-index:20;text-align:center;font-weight:700;font-size:18px}
+#ban button{margin-top:8px;background:#fff;color:#0b5d40;border:0;border-radius:12px;padding:8px 20px;font:inherit}
+#st{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:10}
+#st .sh{position:absolute;bottom:0;left:0;right:0;max-width:480px;margin:auto;background:#fbf8ea;border-radius:26px 26px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px));max-height:85vh;overflow:auto;font-size:16px}
+.sh h3{margin:0 0 6px;font-size:20px}
+.sh .sec{background:#fffefb;border:1px solid #eadfcb;border-radius:18px;padding:12px 14px;margin-top:12px}
+.sw{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #f1e9da;font-size:17px;font-weight:500}
+.sw:last-child{border:0}
+input[type=checkbox]{width:24px;height:24px;accent-color:#0b5d40}
+.b{background:#0b5d40;color:#fff;border:0;border-radius:14px;padding:11px 16px;font:inherit;font-size:16px;margin:8px 0 0 8px}
+.b.g{background:#d3efc2;color:#0b3d2a}
+.nt{font-size:13px;color:#5d7a6b;line-height:1.8;margin-top:8px}
+input[type=file]{font:inherit;font-size:14px;max-width:100%}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i0" viewBox="0 0 48 48"><path d="M10 40V31a14 14 0 0 1 28 0v9z" fill="#0b3d2a"/><path d="M6 40h36" stroke="#0b3d2a" stroke-width="3" stroke-linecap="round"/><path d="M27 6a6 6 0 1 0 5 9 5 5 0 1 1-5-9z" fill="#0b3d2a"/><rect x="23" y="14" width="2" height="6" fill="#0b3d2a"/></symbol>
+<symbol id="i1" viewBox="0 0 48 48"><path d="M13 32a11 11 0 0 1 22 0z" fill="#f5b800"/><path d="M24 10v6M10 18l4 4M38 18l-4 4M5 30h5M38 30h5" stroke="#0b3d2a" stroke-width="3" stroke-linecap="round"/><path d="M8 36h32M14 41h20" stroke="#0b3d2a" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="i2" viewBox="0 0 48 48"><circle cx="24" cy="24" r="9" fill="#0b3d2a"/><path d="M24 5v6M24 37v6M5 24h6M37 24h6M10.5 10.5l4 4M33.5 33.5l4 4M37.5 10.5l-4 4M14.5 33.5l-4 4" stroke="#0b3d2a" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="i3" viewBox="0 0 48 48"><path d="M14 27a10 10 0 0 1 20 0z" fill="#f5b800"/><path d="M24 7v5M10 14l3 3M38 14l-3 3M6 26h5M37 26h5" stroke="#0b3d2a" stroke-width="3" stroke-linecap="round"/><path d="M12 41a7 7 0 0 1 1-14 9 9 0 0 1 17 2 6 6 0 0 1 4 12z" fill="#0b3d2a"/></symbol>
+<symbol id="i4" viewBox="0 0 48 48"><path d="M13 32a11 11 0 0 1 22 0z" fill="#f5b800"/><path d="M24 10v6M10 18l4 4M38 18l-4 4M5 30h5M38 30h5" stroke="#f5b800" stroke-width="3" stroke-linecap="round"/><path d="M8 36h32M14 41h20" stroke="#0b3d2a" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="i5" viewBox="0 0 48 48"><path d="M26 6a18 18 0 1 0 16 26A15 15 0 0 1 26 6z" fill="#0b3d2a"/><path d="M36 8l1.2 3 3 1.2-3 1.2L36 16.5l-1.2-3.1-3-1.2 3-1.2zM42 20l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="#0b3d2a"/></symbol>
+</defs></svg>
+<div id="ban"><div id="bt"></div><button onclick="stopA()">إيقاف الأذان</button></div>
+<div id="app">
+<svg class="arch" viewBox="0 0 941 190" preserveAspectRatio="none"><defs><linearGradient id="ag" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cdeeb4"/><stop offset="1" stop-color="#eef6d6"/></linearGradient></defs>
+<path d="M0 0H360C300 8 250 30 205 58C175 80 150 78 125 96C95 118 50 120 0 150Z" fill="url(#ag)"/>
+<path d="M941 0H580C640 8 690 30 735 58C765 80 790 78 815 96C845 118 890 120 941 150Z" fill="url(#ag)"/>
+<path d="M360 0C330 4 290 20 250 48M580 0C610 4 650 20 690 48" stroke="#e5efc9" stroke-width="3" fill="none"/></svg>
+<button class="gear" onclick="op(1)" aria-label="الإعدادات"><svg viewBox="0 0 24 24" fill="#0b3d2a"><path d="M19.4 13a7.9 7.9 0 0 0 0-2l2.1-1.6a.5.5 0 0 0 .1-.6l-2-3.5a.5.5 0 0 0-.6-.2l-2.5 1a7.3 7.3 0 0 0-1.7-1l-.4-2.6a.5.5 0 0 0-.5-.4h-4a.5.5 0 0 0-.5.4L9 5.5a7.3 7.3 0 0 0-1.7 1l-2.5-1a.5.5 0 0 0-.6.2l-2 3.5a.5.5 0 0 0 .1.6L4.6 11a7.9 7.9 0 0 0 0 2l-2.1 1.6a.5.5 0 0 0-.1.6l2 3.5c.1.2.4.3.6.2l2.5-1c.5.4 1.1.7 1.7 1l.4 2.6c0 .2.2.4.5.4h4c.3 0 .5-.2.5-.4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1c.2.1.5 0 .6-.2l2-3.5a.5.5 0 0 0-.1-.6zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg></button>
+<div class="g1" id="g"></div>
+<i class="ln" style="left:65px;width:170px"></i><i class="ln" style="left:708px;width:170px"></i>
+<div class="g2" id="h"></div>
+<div class="hero"><svg class="il" viewBox="0 0 409 410"><defs>
+<radialGradient id="gl" cx="197" cy="244" r="270" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe94d"/><stop offset=".5" stop-color="#d9cf3a" stop-opacity=".85"/><stop offset="1" stop-color="#0b5d40" stop-opacity="0"/></radialGradient>
+<radialGradient id="sn" cx="197" cy="230" r="120" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff39a"/><stop offset="1" stop-color="#fcd934"/></radialGradient>
+<linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fae45"/><stop offset="1" stop-color="#14673c"/></linearGradient></defs>
+<rect width="409" height="410" fill="#0d6140"/><rect width="409" height="410" fill="url(#gl)"/>
+<g stroke="#fff6a8" stroke-width="9" opacity=".22" stroke-linecap="round"><path d="M197 244L197 0M197 244L90 0M197 244L304 0M197 244L0 70M197 244L409 70M197 244L0 190M197 244L409 190M197 244L140 0M197 244L254 0"/></g>
+<circle cx="197" cy="244" r="116" fill="url(#sn)"/>
+<rect y="268" width="409" height="142" fill="url(#sea)"/>
+<g fill="#0c5a33"><path d="M150 300C150 264 170 248 199 248C228 248 248 264 248 300Z"/><rect x="197.5" y="230" width="3" height="18"/><circle cx="199" cy="228" r="4"/>
+<rect x="140" y="298" width="118" height="44"/><path d="M104 318a22 22 0 0 1 44 0zM250 318a22 22 0 0 1 44 0z"/><path d="M80 330a14 14 0 0 1 28 0zM290 330a14 14 0 0 1 28 0z"/>
+<rect x="33" y="215" width="12" height="130"/><path d="M30 215L39 193 48 215z"/><rect x="29" y="250" width="20" height="5"/>
+<rect x="353" y="215" width="12" height="130"/><path d="M350 215L359 193 368 215z"/><rect x="349" y="250" width="20" height="5"/>
+<rect x="64" y="262" width="9" height="80"/><path d="M62 262L68.5 247 75 262z"/><rect x="322" y="262" width="9" height="80"/><path d="M320 262L326.5 247 333 262z"/>
+<path d="M0 340H409V410H0z"/></g>
+<g fill="#f2d24b" opacity=".9"><rect x="168" y="312" width="7" height="14" rx="3"/><rect x="195" y="312" width="7" height="14" rx="3"/><rect x="222" y="312" width="7" height="14" rx="3"/></g>
+<path d="M0 410L0 372 180 400 409 365 409 410z" fill="#1b7c47" opacity=".85"/><path d="M0 410L170 385 409 410z" fill="#0d5a35" opacity=".8"/></svg><i class="vd"></i>
+<div class="pill">الوقت المتبقي لصلاة</div><div class="hn" id="nn">—</div>
+<b class="dg" id="c0" style="left:449px">--</b><b class="cl" style="left:570px">:</b><b class="dg" id="c1" style="left:591px">--</b><b class="cl" style="left:710px">:</b><b class="dg" id="c2" style="left:730px">--</b>
+<span class="lb" style="left:464px">ساعة</span><span class="lb" style="left:606px">دقيقة</span><span class="lb" style="left:745px">ثانية</span></div>
+<div class="list" id="list"></div>
+<div class="foot"><div class="ft">ناحية الزاب الأسفل</div><i class="fd"></i><svg viewBox="0 0 48 48"><path d="M3 35l11-5 10 4 10-4 11 5-5 8H8z" fill="#1fb554"/><path d="M24 4a9 9 0 0 0-9 9c0 8 9 18 9 18s9-10 9-18a9 9 0 0 0-9-9z" fill="#e53935"/><circle cx="24" cy="13" r="3.6" fill="#fff"/></svg></div>
+</div>
+<div id="st" onclick="if(event.target==this)op(0)"><div class="sh">
+  <h3>الإعدادات</h3>
+  <div class="sec"><b>صوت الأذان</b>
+    <div class="nt">اختر ملف الأذان من جهازك (mp3 / m4a / wav).</div>
+    <input type="file" id="fa" accept="audio/*">
+    <div class="nt" id="fn"></div>
+    <button class="b g" onclick="play()">تجربة الصوت</button><button class="b" onclick="enable()">تفعيل التنبيهات</button>
+    <div class="nt" id="en"></div></div>
+  <div class="sec"><b>التنبيه عند دخول وقت</b><div id="sw"></div></div>
+  <div class="sec"><label class="sw" style="border:0">إبقاء الشاشة مفعّلة<input type="checkbox" id="wl"></label>
+    <div class="nt">يعمل التطبيق داخل المتصفح، لذا يجب أن تبقى الصفحة مفتوحة ليعمل الأذان في موعده.</div></div>
+  <button class="b" onclick="op(0)" style="width:100%;margin:14px 0 0">إغلاق</button>
+</div></div>
+<script>
+/* أوقات السنة: كل يوم 6 أوقات بصيغة HHMM كما في الجدول المطبوع (الفجر الشروق الظهر العصر المغرب العشاء) */
+const M=[
+"0559071912150249050506250559071912150249050606260559071912160250050606260559071912160251050806280559071912160252050906290559071912170252051006300559071912170253051006300559071912180254051106310559071912180255051206320559071912180256051306330559071912190256051406340559071912190257051506350559071912200258051606360558071812200259051706370558071812200300051806380558071812210301051906390557071712210302052006400557071712210303052106410557071712220303052206420556071612220304052306430556071612220305052406440555071512220306052506450555071512230307052606460554071412230308052706470554071412230309052706470553071312230310052906490553071312240311053006500552071212240312053106510552071212240313053206520551071112240313053306530550071012240314053406540",
+"0549070912240315053506550549070912250316053606560548070812250317053706570547070712250318053806580546070612250319053906590545070512250320054007000545070512250321054107010544070412250321054207020543070312250322054307030542070212250323054407040541070112250324054507050540070012250325054607060539065912250325054707070538065812250326054807080537065712250327054907090536065612250328054907090535065512250329055107110534065412250329055207120533065312250330055307130531065112250331055407140530065012250331055507150529064912250332055607160528064812250333055707170527064712250333055807180526064612240334055907190524064412240335060007200523064312240335060007200522064212240336060107210522064212240336060107210",
+"0521064112240337060207220519063912240337060307230518063812230338060407240517063712230338060507250515063512230339060607260514063412230339060707270513063312220339060807280511063112220340060807290510063012220340060907290509062912210341060907310507062712210341061107320506062612210342061207330505062512210342061307330503062312200343061307340502062212200343061407350501062112200344061507360459061912190344061607370458061812190344061707380456061612190345061807380455061512190345061807390454061412180346061907390452061212180346062007400451061112170346062107410449060912170347062207420448060812170347062307430446060612170347062307430445060512160348062407440444060412160348062507450442060212160348062607460441060112160348062707470439060012150349062707470",
+"0438055812150349062707470437055712150349062907490435055512140349063007500434055412140349063107510432055212140350063107510431055112130350063207520430055012130350063307530428054812130350063407540427054712120350063507550426054612120350063507550424054412120351063607560423054312120351063707570421054112110351063807580420054012110351063907590419053912110351063907590418053812110351063907590417053712100352064108010415053512100352064208020414053412100352064308030413053312100352064408040412053212090352064408040410053012090352064508050409052912090352064608060408052812090353064708070407052712090353064808080406052612080353064808080405052512080353064908090404052412080353065008100402052212080353065108110401052112080353065208120",
+"0400052012080354065308130359051912080354065308130358051812080354065408140357051712070354065508150356051612070354065608160355051512070354065708170354051412070354065808180354051412070354065808180353051312070355065908190352051212070355070008200351051112070355070108210350051012070355070208220349050912070355070208220349050912070356070308230348050812070356070408240347050712070356070508250347050712070356070508250346050612070356070608260345050512070356070708270345050512080357070808280344050412080357070908290343050312080357070908290343050312080357071008300342050212080357071108310342050212080358071108310341050112080358071208320341050112080358071308330341050112080358071408340340050012090358071408340340050012090359071408340339045912090359071508350",
+"0339045912090359071608360339045912090359071708370339045912090400071708370338045812090400071808380338045812100400071808380338045812100400071908390338045812100400072008400338045812100401072008400338045812100401072008400337045712110401072108410337045712110401072108410337045712110402072208420337045712110402072208420337045712110402072308430337045712120402072308430337045712120402072308430338045812120403072408440338045812120403072408440338045812120403072408440338045812130403072408440338045812130404072408440338045812130404072508450339045912130404072508450339045912130404072508450339045912140404072508450339045912140404072508450340050012140405072508450340050012140405072508450340050012140405072508450340050012150405072508450",
+"0341050112150405072508450342050212150405072508450342050212150406072508450342050212150406072508450343050312150406072508450343050312160406072408450344050412160406072408440344050412160406072408440345050512160406072408440345050512160406072408440346050612160406072308430347050712160406072308430347050712160406072308430348050812170407072208420348050812170407072208420349050912170407072108410350051012170407072108410350051012170407072008400351051112170407072008400352051212170406071908390352051212170406071908390353051312170406071808380354051412170406071708370354051412170406071708370355051512170406071608360356051612170406071508350356051612170406071408340357051712170406071408340358051812170405071308330359051912170405071208320359051912170405071108310",
+"0400052012170405071008300401052112170405070908290401052112170404070808280402052212170404070708270403052312170404070608260404052412170404070508250405052512170403070408240405052512160403070308230406052612160403070208220407052712160402070108210408052812160402070008200408052812160401065908190409052912160401065808180410053012160401065708170411053112150400065608160411053112150400065408140412053212150359065308130413053312150359065208120414053412150358065208120414053412140358065008100415053512140357064808080416053612140356064708070417053712140356064608060417053712130355064508050418053812130355064308030419053912130354064208020420054012130353064108010420054012120353063907590421054112120352063807580422054212120351063707570423054312120350063607550",
+"0423054312110350063407540424054412110349063207520425054512110348063107510425054512100347063007500426054612100347062807480427054712100346062707470428054812090345062507450428054812090344062407440429054912090343062307430430055012080342062307430431055112080342062007400431055112080341061807380432055212070340061707370433055312070339061507350433055312070338061407340434055412060337061207320435055512060336061107310435055512050335061007300436055612050334060807280437055712050333060707270438055812040332060507250438055812040331060407240439055912040330060207220440060012030329060107210440060012030328055907190441060112030327055807180442060212020326055707170443060312020325055507150443060312010324055407140444060412010323055207120",
+"0445060512010322055107110446060612000321055107110446060612000320054807080447060712000319054707070448060811590318054507050449060911590317054407040449060911590316054207020450061011580314054107010451061111580313054007000452061211580312053806580452061211580311053706570453061311570310053606560454061411570309053406540455061511570308053306530456061611570307053206520457061711560306053106510457061711560305052906490458061811560304052806480459061911560303052706470500062011550302052606460501062111550301052406440502062211550300052306430503062311550259052206420503062311550258052206420504062411550258051906390505062511550257051906390506062611550256051706370507062711550255051606360508062811540254051506350509062911540253051406340510063011540252051306330",
+"0511063111540252051206320512063211540251051106310513063311540250051006300514063411540249050906290515063511540249050806280516063611540248050806280517063711550247050706270518063811550246050706270519063911550246050506250520064011550245050406240521064111550245050406240522064211550244050306230523064311550243050206220524064411550243050106210525064511560242050106210526064611560242050006200527064711560241050006200528064811560241045906190529064911560241045906190530065011570240045806180531065111570240045806180532065211570240045706170533065311580239045706170534065411580239045606160535065511580239045606160535065511590238045606160536065611590238045506150537065711590238045506150538065812000238045506150539065912000238045506150",
+"0540070012000238045506150541070112010238045406140542070212010238045406140543070312020238045406140544070412020238045506140545070512020238045406140545070512030238045406140546070612030238045406140547070712040238045506150548070812040238045506150549070912050238045506150549070912050239045506150550071012060239045506150551071112060239045606160551071112060240045606160552071212070240045606160553071312070240045706170553071312080241045706170554071412080241045706170554071412090241045806180555071512090242045806180555071512100242045806180556071612100243045906190556071612110243050006200557071712110244050006200557071712120245050106210557071712120245050206220558071812130246050206220558071812130246050306230558071812140247050406240558071812140248050506250"
+];
+const N=['الفجر','الشروق','الظهر','العصر','المغرب','العشاء'];
+const GM=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+const HM=['محرم','صفر','ربيع الأول','ربيع الآخر','جمادى الأولى','جمادى الآخرة','رجب','شعبان','رمضان','شوال','ذو القعدة','ذو الحجة'];
+const $=s=>document.querySelector(s),pad=n=>String(n).padStart(2,'0');
+let S={on:[1,0,1,1,1,1]},fired='';
+try{S=Object.assign(S,JSON.parse(localStorage.getItem('pt_set')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('pt_set',JSON.stringify(S))}catch(e){}};
+
+function dayStr(d){const m=M[d.getMonth()],i=(d.getDate()-1)*24;return m&&m.length>=i+24?m.substr(i,24):null}
+function times(d){const s=dayStr(d);if(!s)return null;const r=[];
+  for(let i=0;i<6;i++){let h=+s.substr(i*4,2);const mi=+s.substr(i*4+2,2);
+    if(i>=3&&h<12)h+=12;if(i==2&&h<=10)h+=12;
+    const x=new Date(d);x.setHours(h,mi,0,0);r.push(x)}return r}
+function f12(d){const h=d.getHours();return [pad(h%12||12)+':'+pad(d.getMinutes()),h<12?'AM':'PM']}
+function nextP(now){for(let k=0;k<2;k++){const d=new Date(now);d.setDate(d.getDate()+k);const t=times(d);if(!t)return null;
+  for(const i of [0,2,3,4,5])if(t[i]>now)return{i,t:t[i]}}return null}
+
+let lastKey='';
+function tick(){
+  const now=new Date(),T=times(now),nx=nextP(now);
+  $('#g').textContent=now.toLocaleDateString('ar',{weekday:'long'})+'، '+now.getDate()+' '+GM[now.getMonth()]+' '+now.getFullYear()+' م';
+  try{const p=Object.fromEntries(new Intl.DateTimeFormat('en-u-ca-islamic-umalqura',{day:'numeric',month:'numeric',year:'numeric'}).formatToParts(now).map(x=>[x.type,x.value]));
+    $('#h').textContent=parseInt(p.day)+' '+HM[parseInt(p.month)-1]+' '+parseInt(p.year)+' هـ'}catch(e){}
+  const key=now.toDateString()+(nx?nx.i:'x');
+  if(key!==lastKey){lastKey=key;
+    const RC=[81,221,351,481,610,738],DV=[155,286,418,544,672];
+    $('#list').innerHTML=DV.map(y=>'<i class="dv" style="top:'+y+'px"></i>').join('')+(T?N.map((n,i)=>{const[a,b]=f12(T[i]);
+      return '<div class="r'+(nx&&nx.i==i?' on':'')+'" style="top:'+(RC[i]-60)+'px"><div class="ic"><svg><use href="#i'+i+'"/></svg></div><div class="nm">'+n+'</div><div class="tm">'+a+'<small>'+b+'</small></div></div>'}).join(''):'');}
+  if(nx){const s=Math.max(0,Math.floor((nx.t-now)/1000));
+    $('#nn').textContent=N[nx.i];
+    $('#c0').textContent=pad(Math.floor(s/3600));$('#c1').textContent=pad(Math.floor(s%3600/60));$('#c2').textContent=pad(s%60);
+  }else{$('#nn').textContent='—';['#c0','#c1','#c2'].forEach(k=>$(k).textContent='--')}
+  if(T)for(let i=0;i<6;i++){const k=now.toDateString()+i,df=now-T[i];
+    if(S.on[i]&&df>=0&&df<60000&&fired!==k){fired=k;alarm(i)}}
+}
+function fit(){const w=innerWidth,h=innerHeight,k=Math.min(w/941,h/1672);$('#app').style.transform='translate('+(w-941*k)/2+'px,'+(h-1672*k)/2+'px) scale('+k+')'}
+addEventListener('resize',fit);fit();
+setInterval(tick,1000);
+
+/* ---- audio ---- */
+let au=new Audio(),ctx=null,bt=null;
+const idb=()=>new Promise((r,j)=>{const q=indexedDB.open('pt',1);q.onupgradeneeded=()=>q.result.createObjectStore('f');q.onsuccess=()=>r(q.result);q.onerror=j});
+async function putF(b){try{const d=await idb();d.transaction('f','readwrite').objectStore('f').put(b,'a')}catch(e){}}
+async function getF(){try{const d=await idb();return await new Promise(r=>{const q=d.transaction('f').objectStore('f').get('a');q.onsuccess=()=>r(q.result);q.onerror=()=>r()})}catch(e){}}
+getF().then(b=>{if(b){au.src=URL.createObjectURL(b);$('#fn').textContent='الصوت المحدد: '+(S.fname||'ملف مخصص')}else $('#fn').textContent='لم يتم اختيار صوت (سيُستخدم صوت تنبيه بسيط).'});
+$('#fa').onchange=async e=>{const f=e.target.files[0];if(!f)return;await putF(f);au.src=URL.createObjectURL(f);S.fname=f.name;save();$('#fn').textContent='الصوت المحدد: '+f.name};
+function beep(){try{ctx=ctx||new AudioContext();let n=0;clearInterval(bt);bt=setInterval(()=>{if(n++>8){clearInterval(bt);return}
+  const o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=660;o.connect(g);g.connect(ctx.destination);g.gain.setValueAtTime(.3,ctx.currentTime);o.start();o.stop(ctx.currentTime+.4)},700)}catch(e){}}
+function play(){if(au.src){au.currentTime=0;au.play().catch(beep)}else beep()}
+function stopA(){au.pause();clearInterval(bt);$('#ban').style.display='none'}
+au.onended=()=>{$('#ban').style.display='none'};
+function alarm(i){const m=i==1?'حان وقت الشروق':'حان الآن وقت صلاة '+N[i];
+  $('#bt').textContent=m;$('#ban').style.display='block';play();
+  try{if(Notification.permission==='granted')new Notification(m,{body:'ناحية الزاب الأسفل',tag:'pt'+i})}catch(e){}}
+async function enable(){let m='';
+  try{ctx=ctx||new AudioContext();await ctx.resume();m+='تم تفعيل الصوت. '}catch(e){}
+  try{const p=await Notification.requestPermission();m+=p==='granted'?'تم السماح بالإشعارات.':'الإشعارات غير مسموحة (سيعمل الصوت داخل الصفحة).'}catch(e){m+='الإشعارات غير مدعومة في هذا المتصفح.'}
+  $('#en').textContent=m}
+
+/* ---- settings ---- */
+const op=v=>$('#st').style.display=v?'block':'none';
+$('#sw').innerHTML=N.map((n,i)=>'<label class="sw">'+n+'<input type="checkbox" data-i="'+i+'" '+(S.on[i]?'checked':'')+'></label>').join('');
+$('#sw').onchange=e=>{S.on[e.target.dataset.i]=e.target.checked?1:0;save()};
+let wk=null;
+$('#wl').onchange=async e=>{try{if(e.target.checked)wk=await navigator.wakeLock.request('screen');else if(wk){wk.release();wk=null}}catch(x){e.target.checked=false}};
+tick();
+</script>
+</body></html>
