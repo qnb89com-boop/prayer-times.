@@ -1,6 +1,6 @@
 {
   "appId": "com.zabasfal.prayertimes",
-  "appName": "مواقيت ناحية الزاب",
+  "appName": "مواقيت الزاب",
   "webDir": "www",
   "backgroundColor": "#fbf8ea",
   "server": { "androidScheme": "https" }
