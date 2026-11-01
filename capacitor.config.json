@@ -1,0 +1,7 @@
+{
+  "appId": "com.zabasfal.prayertimes",
+  "appName": "أوقات الصلاة",
+  "webDir": "www",
+  "backgroundColor": "#fbf8ea",
+  "server": { "androidScheme": "https" }
+}
